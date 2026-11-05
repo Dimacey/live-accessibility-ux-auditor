@@ -1,0 +1,6 @@
+{
+  "name": "Live Accessibility & UX Auditor",
+  "description": "Мультимодальний реверс-інжиніринг інтерфейсів, стрімінг екрана, перевірка доступності (WCAG) та виправлення UX-дефектів у реальному часі.",
+  "requestFramePermissions": ["display-capture", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
