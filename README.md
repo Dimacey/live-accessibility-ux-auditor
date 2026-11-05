@@ -87,9 +87,10 @@ server.ts                        # Серверний проксі для без
 
 ## ⚙️ Інструкція зі встановлення та запуску
 
+### Варіант А: Локальний запуск через Node.js
 1. **Клонуйте репозиторій:**
    ```bash
-   git clone https://github.com/your-username/live-accessibility-ux-auditor.git
+   git clone https://github.com/Dimacey/live-accessibility-ux-auditor.git
    cd live-accessibility-ux-auditor
    ```
 
@@ -118,6 +119,19 @@ server.ts                        # Серверний проксі для без
 
 ---
 
+### Варіант Б: Запуск в 1 клік через Docker
+```bash
+# 1. Збірка контейнера
+docker build -t live-ux-auditor .
+
+# 2. Запуск сервісу
+docker run -d -p 3000:3000 -e GEMINI_API_KEY="ваш_ключ" --name auditor live-ux-auditor
+```
+Після цього відкрийте `http://localhost:3000` у браузері.
+
+---
+
 ## 🛡️ Безпека та ліцензія
-- **Безпека ключа:** Бекенд повністю захищає API-ключ Gemini на сервері (`server.ts`).
-- **Ліцензія:** MIT License. Створено для професійних тестувальників, UX-дизайнерів та розробників.
+- **Безпека ключа:** Бекенд повністю захищає API-ключ Gemini на сервері (`server.ts`). Підтримується режим **BYOK** (Bring Your Own Key).
+- **Ліцензія:** [MIT License](LICENSE). Відкритий код для вільного використання розробниками, тестувальниками та бізнесом по всьому світу.
+- **Автор:** [Dmytro Terekhov (Dimacey)](https://github.com/Dimacey).
